@@ -6,6 +6,8 @@ import java.io.IOException;
 
 public class ChangeFile {
     NameAndPath nameAndPath = new NameAndPath();
+
+    //запись текста в файл
     public void writeInFile() {
         String text = "Hello World";
         try(FileWriter writer = new FileWriter(nameAndPath.namePath + "//" + nameAndPath.newCatalogName + "//" + nameAndPath.fileName, false)){
@@ -20,6 +22,8 @@ public class ChangeFile {
         }
         System.out.println("The file has been written");
     }
+
+    //чтение текста из файла
     public void readFromFile(){
         try(FileReader reader = new FileReader(nameAndPath.namePath + "//" + nameAndPath.newCatalogName + "//" + nameAndPath.fileName)){
             int c;

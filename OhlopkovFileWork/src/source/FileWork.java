@@ -11,6 +11,8 @@ public class FileWork {
     NameAndPath nameAndPath = new NameAndPath();
 
         File myFile = new File(nameAndPath.getNamePath() + nameAndPath.getFileName());
+
+        //создание файла
         public void createFile(){
         if(myFile.exists())
             System.out.println("File with this name already exist");
@@ -26,7 +28,7 @@ public class FileWork {
             }
 
         }
-
+        //переименование файла
         public void renameFile(){
          if(myFile.exists())
             System.out.println("File found");
@@ -40,7 +42,7 @@ public class FileWork {
                  else
                     System.out.println("File not renamed");
         }
-
+        //удаление файла
         public void deleteFile(){
             if(myFile.exists())
                 System.out.println("File found");
@@ -53,7 +55,7 @@ public class FileWork {
                 else
                     System.out.println("File not deleted");
         }
-
+        //перемещение файла
         public void moveFile() throws IOException {
                 Files.move(Paths.get(nameAndPath.moveFileFromCatalog + nameAndPath.getFileName()), Paths.get(nameAndPath.moveFileToCatalog + "//" + nameAndPath.getFileName()), StandardCopyOption.REPLACE_EXISTING);
 
